@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './Casc.css';
 
 const Calculator =()=>{
     const [input, setInput] = useState('');
@@ -64,29 +64,31 @@ const Calculator =()=>{
     return (
         // <div style={containerStyle}>
         //   <div style={displayStyle}>
-        <div>
-            <input type="text" value={input} readOnly  />
-            <div>{result}</div>
+      <div>
+           <h1>My Calculator App</h1>
+           <h1 className='input'>Input <input type="text" value={input} readOnly/></h1>
+            <div className='result-container'><h2>Result: {result}</h2></div>
         {/* //   </div> */}
-          <div className='buttons1'>
+        <div className='button-containgit clone <repository-url>er'>
+          <div>
             <button  onClick={() => handleClick('1')}>1</button>
             <button  onClick={() => handleClick('2')}>2</button>
             <button  onClick={() => handleClick('3')}>3</button>
             <button  onClick={() => handleClick('+')}>+</button>
             </div>
-            <div className='buttons1'>
+            <div>
             <button  onClick={() => handleClick('4')}>4</button>
             <button  onClick={() => handleClick('5')}>5</button>
             <button  onClick={() => handleClick('6')}>6</button>
             <button  onClick={() => handleClick('-')}>-</button>
             </div>
-            <div className='buttons1'>
+            <div>
             <button  onClick={() => handleClick('7')}>7</button>
             <button  onClick={() => handleClick('8')}>8</button>
             <button  onClick={() => handleClick('9')}>9</button>
             <button  onClick={() => handleClick('*')}>*</button>
             </div>
-            <div className='buttons1'>
+            <div>
             <button  onClick={() => handleClick('0')}>0</button>
             <button  onClick={() => handleClick('.')}>.</button>
             <button  onClick={handleClear}>C</button>
@@ -94,7 +96,8 @@ const Calculator =()=>{
             <button  onClick={handleCalculate}>=</button>
           </div>
         </div>
-      );
+      </div>
+  );
  
 };
 export default Calculator;
